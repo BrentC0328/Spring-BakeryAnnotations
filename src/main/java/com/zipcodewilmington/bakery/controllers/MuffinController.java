@@ -28,7 +28,7 @@ public class MuffinController {
     }
 
     @PostMapping(value = "/muffins")
-    public ResponseEntity<Muffin> create(Muffin baker) {
+    public ResponseEntity<Muffin> create(@RequestBody Muffin baker) {
         return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }
 

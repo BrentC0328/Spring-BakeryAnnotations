@@ -28,7 +28,7 @@ public class BakerController {
     }
 
     @PostMapping(value = "/bakers")
-    public ResponseEntity<Baker> create(Baker baker) {
+    public ResponseEntity<Baker> create(@RequestBody Baker baker) {
         return new ResponseEntity<>(service.create(baker), HttpStatus.CREATED);
     }
 
